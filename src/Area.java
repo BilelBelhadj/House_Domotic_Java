@@ -4,6 +4,16 @@ public abstract class Area {
     private String  name = "";
     private boolean window;
     private boolean door;
+    private boolean light;
+
+    
+    public Area(String  name, boolean window, boolean door, boolean light){
+        this.name = name;
+        this.window = window;
+        this.door = door;
+        this.light = light;
+    }
+
 
     //methodes
     //getters pour retourner les valeurs des attributs privet
@@ -19,6 +29,10 @@ public abstract class Area {
         return this.door;
     }
 
+    public boolean getLight() {
+        return this.light;
+    }
+
     //setters pour changer lesvaleurs des attributs privet
     public void setName(String name) {
         this.name = name;
@@ -32,7 +46,16 @@ public abstract class Area {
         this.door = door;
     }
 
+    public void setLight(boolean light) {
+        this.light = light;
+    }
+
     public String toString(){
         return "|Nom : " + getName() + "|Window statu : " + getWindow() + "|Door statu" + getDoor();
+    }
+
+    //affichaer des informations additionelle sur la grandeur de  la piece
+    public void description(String desc){
+        System.out.println(desc);
     }
 }

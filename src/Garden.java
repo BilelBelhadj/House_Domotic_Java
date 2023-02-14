@@ -3,6 +3,7 @@ public final class Garden {
     //attributs
     private boolean irrigation;
 
+        
     //methodes
     //getters
     public boolean getIrrigation() {
@@ -14,5 +15,12 @@ public final class Garden {
         this.irrigation = irrigation;
     }
 
+    public String toString(){
+        return "|Irrigation : " + getIrrigation();
+    }
+    
+    Garden(boolean irrigation){
+        this.irrigation = irrigation;
+    }
     
 }
