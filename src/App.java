@@ -102,48 +102,92 @@ public class App {
                     break;
 
                 case 3:
-                System.out.println ("2- Activee/desactivee Lumiere de |1-Chambre 1  |2-Chambre 2 |3-Garage  |4- Cuisine.");
+                System.out.println ("2- Activee/desactivee porte de |1-Chambre 1  |2-Chambre 2 |3-Garage  |4- Cuisine.");
                 choixArea = sc.nextInt();
                 if(choixArea == 1){
 
-                    if(chambre1.getLight() == true){
-                        chambre1.setLight(false);
+                    if(chambre1.getDoor() == true){
+                        chambre1.setDoor(false);
                     }else{
-                        chambre1.setLight(true);
+                        chambre1.setDoor(true);
                     }
                 }
                 if(choixArea == 2){
-                    if(chambre2.getLight() == true){
-                        chambre2.setLight(false);
+                    if(chambre2.getDoor() == true){
+                        chambre2.setDoor(false);
                     }else{
-                        chambre2.setLight(true);
+                        chambre2.setDoor(true);
                     }
                 }
                 if(choixArea == 3){
-                    if(Garage1.getLight() == true){
-                        Garage1.setLight(false);
+                    if(Garage1.getDoor() == true){
+                        Garage1.setDoor(false);
                     }else{
-                        Garage1.setLight(true);
+                        Garage1.setDoor(true);
                     }
                 }
                 if(choixArea == 4){
-                    if(kitchen.getLight() == true){
-                        kitchen.setLight(false);
+                    if(kitchen.getDoor() == true){
+                        kitchen.setDoor(false);
                     }else{
-                        kitchen.setLight(true);
+                        kitchen.setDoor(true);
                     }
                 }
                     break;
+
                 case 4:
-                    
+                System.out.println ("2- Activee/desactivee fenetre de |1-Chambre 1  |2-Chambre 2 |3-Garage  |4- Cuisine.");
+                choixArea = sc.nextInt();
+                if(choixArea == 1){
+
+                    if(chambre1.getWindow() == true){
+                        chambre1.setWindow(false);
+                    }else{
+                        chambre1.setWindow(true);
+                    }
+                }
+                if(choixArea == 2){
+                    if(chambre2.getWindow() == true){
+                        chambre2.setWindow(false);
+                    }else{
+                        chambre2.setWindow(true);
+                    }
+                }
+                if(choixArea == 3){
+                    if(Garage1.getWindow() == true){
+                        Garage1.setWindow(false);
+                    }else{
+                        Garage1.setWindow(true);
+                    }
+                }
+                if(choixArea == 4){
+                    if(kitchen.getWindow() == true){
+                        kitchen.setWindow(false);
+                    }else{
+                        kitchen.setWindow(true);
+                    }
+                }
                     break;
                 case 5:
-                    
+                System.out.println ("2- affichage de |1-Chambre 1  |2-Chambre 2 |3-Garage  |4- Cuisine.");
+                choixArea = sc.nextInt();
+                if(choixArea == 1){
+
+                    chambre1.toString();
+                }
+
+                if(choixArea == 2){
+                    chambre2.toString(); 
+                }
+
+                if(choixArea == 3){
+                    Garage1.toString();
+                }
+                if(choixArea == 4){
+                    kitchen.toString();
+                }
                     break;
                 case 6:
-                    
-                    break;
-                case 7:
                     System.out.println("Thanks for your time");
                     test = false;
                     break;
