@@ -1,6 +1,18 @@
 public final class Garden {
 
-    void definition(){
-        System.out.println("le jardin du maison");
+    //attributs
+    private boolean irrigation;
+
+    //methodes
+    //getters
+    public boolean getIrrigation() {
+        return this.irrigation;
     }
+
+    //setters
+    public void setIrrigation(boolean irrigation) {
+        this.irrigation = irrigation;
+    }
+
+    
 }
