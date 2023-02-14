@@ -32,40 +32,107 @@ public class App {
         Garage1.description("Chambre pour dormir");
         Garage1.description("Cuisine avec un TV");
 
-        int choix = 0;
+        int choixAct = 0;
+        int choixArea = 0;
 
         boolean test = true;
         while(test == true){
 
-            //choix disponibles
+            //choixAct disponibles
             System.out.println("***** Choisir l'action que vous desirez***** ");
-            System.out.println ("1- Manipuler l'irrigation dans le jardin.");
-            System.out.println ("2- Manipuler chambre1.");
-            System.out.println ("3- Manipuler chambre2.");
-            System.out.println ("4- Manipuler  la cuisine.");
-            System.out.println ("5- Manipuler le garage.");
-            System.out.println ("6- Afficher l'etat d'une piece.");
-            System.out.println ("7- Fermer le programme.");
+            System.out.println ("1- Activee/desactivee l'irrigation dans le jardin.");
+            System.out.println ("2- Activee/desactivee Lumiere.");
+            System.out.println ("3- Activee/desactivee fenetre.");
+            System.out.println ("4- Activee/desactivee porte.");
+            System.out.println ("5- Afficher l'etat d'une piece.");
+            System.out.println ("6- Fermer le programme.");
             
             try {
-                choix = sc.nextInt();
+                choixAct = sc.nextInt();
             } finally {
-                if (choix < 1 || choix > 7){
-                    throw new Myexeption("Choix doit etre entre 1 et  7 SVP! ");
+                if (choixAct < 1 || choixAct > 6){
+                    throw new Myexeption("choix d'action doit etre entre 1 et  6 SVP! ");
                 
-                }else {System.out.println("Choix valide");}
+                }else {System.out.println("choix action valide");}
             }
 
-            //trairement du choix
-            switch(choix){
+            //trairement du choixAct
+            switch(choixAct){
                 case 1:
-                    
+
+                    if(jardin.getIrrigation() == true){
+                        jardin.setIrrigation(false);
+                    }else{
+                        jardin.setIrrigation(true);
+                    }
                     break;
+
                 case 2:
-                    
+                    System.out.println ("2- Activee/desactivee Lumiere de |1-Chambre 1  |2-Chambre 2 |3-Garage  |4- Cuisine.");
+                    choixArea = sc.nextInt();
+                    if(choixArea == 1){
+
+                        if(chambre1.getLight() == true){
+                            chambre1.setLight(false);
+                        }else{
+                            chambre1.setLight(true);
+                        }
+                    }
+                    if(choixArea == 2){
+                        if(chambre2.getLight() == true){
+                            chambre2.setLight(false);
+                        }else{
+                            chambre2.setLight(true);
+                        }
+                    }
+                    if(choixArea == 3){
+                        if(Garage1.getLight() == true){
+                            Garage1.setLight(false);
+                        }else{
+                            Garage1.setLight(true);
+                        }
+                    }
+                    if(choixArea == 4){
+                        if(kitchen.getLight() == true){
+                            kitchen.setLight(false);
+                        }else{
+                            kitchen.setLight(true);
+                        }
+                    }
                     break;
+
                 case 3:
-                    
+                System.out.println ("2- Activee/desactivee Lumiere de |1-Chambre 1  |2-Chambre 2 |3-Garage  |4- Cuisine.");
+                choixArea = sc.nextInt();
+                if(choixArea == 1){
+
+                    if(chambre1.getLight() == true){
+                        chambre1.setLight(false);
+                    }else{
+                        chambre1.setLight(true);
+                    }
+                }
+                if(choixArea == 2){
+                    if(chambre2.getLight() == true){
+                        chambre2.setLight(false);
+                    }else{
+                        chambre2.setLight(true);
+                    }
+                }
+                if(choixArea == 3){
+                    if(Garage1.getLight() == true){
+                        Garage1.setLight(false);
+                    }else{
+                        Garage1.setLight(true);
+                    }
+                }
+                if(choixArea == 4){
+                    if(kitchen.getLight() == true){
+                        kitchen.setLight(false);
+                    }else{
+                        kitchen.setLight(true);
+                    }
+                }
                     break;
                 case 4:
                     
